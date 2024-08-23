@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Summary Report</title>
+</head>
+<body>
+    <h1>Monthly Summary Report</h1>
+    <form id="upload-form" action="/graph" method="post" enctype="multipart/form-data">
+        <label for="file">Upload Report:</label>
+        <input type="file" id="file" name="file" required>
+        <br>
+        <label for="begee-cost">Enter the cost of production for Begee:</label>
+        <input type="number" id="begee-cost" name="begee_cost" step="0.01" required>
+        <br>
+        <label for="buckhead-cost">Enter the cost of production for Buckhead:</label>
+        <input type="number" id="buckhead-cost" name="buckhead_cost" step="0.01" required>
+        <br>
+        <button type="submit">Generate Graph</button>
+    </form>
+    {% if main_graph_url %}
+        <h2>Main Graph</h2>
+        <img src="{{ main_graph_url }}" alt="Generated Main Graph">
+    {% endif %}
+    {% if individual_graph_url %}
+        <h2>Amazon Fee Detailed Graph</h2>
+        <img src="{{ individual_graph_url }}" alt="Generated Individual Graph">
+    {% endif %}
+    {% if percent_graph_url %}
+        <h2>Percent Graph</h2>
+        <img src="{{ percent_graph_url }}" alt="Generated Percent Graph">
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+{'Date': '01/01/2023', 'Transaction type': 'Order Payment', 'Product Details': 'begee product', 'Total (GBP)': 100, 'Amazon fees': 5, 'Other': 1, '_id': ObjectId('6672f66a554c4a094bbf1293')}
+{'Date': '02/01/2023', 'Transaction type': 'Order Payment', 'Product Details': 'buckhead product', 'Total (GBP)': 150, 'Amazon fees': 10, 'Other': 2, '_id': ObjectId('6672f66a554c4a094bbf1294')}

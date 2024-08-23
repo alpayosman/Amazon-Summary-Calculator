@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculation Result</h1>
+    {% if main_graph_url %}
+        <h2>Main Graph</h2>
+        <img src="{{ main_graph_url }}" alt="Generated Main Graph">
+    {% endif %}
+    {% if individual_graph_url %}
+        <h2>Amazon Fee Detailed Graph</h2>
+        <img src="{{ individual_graph_url }}" alt="Generated Individual Graph">
+    {% endif %}
+    {% if percent_graph_url %}
+        <h2>Percent Graph</h2>
+        <img src="{{ percent_graph_url }}" alt="Generated Percent Graph">
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
